@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Community Theories | CIPHER</title>
+
+<link rel="stylesheet" href="{% static 'css/theories.css' %}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">CIPHER</div>
+
+    <nav class="menu">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'blog' %}">Blog</a>
+        <a href="{% url 'add_theory' %}">Submit Theory</a>
+    </nav>
+</header>
+
+
+<!-- MAIN SECTION -->
+<section class="theories-section">
+
+<h1>Community Theories</h1>
+
+<p class="subtitle">
+Theories submitted by the CIPHER community.
+</p>
+
+
+<div class="theory-container">
+
+{% for t in theories %}
+
+<div class="theory-card">
+
+    <!-- TITLE -->
+    <h3>{{ t.title }}</h3>
+
+    <!-- CONTENT -->
+    <p>{{ t.content }}</p>
+
+    <!-- USER NAME -->
+    <small>
+        By {% if t.user %}{{ t.user.username }}{% else %}Anonymous{% endif %}
+    </small>
+
+    <br><br>
+
+    <!-- EDIT & DELETE (ONLY OWNER CAN SEE) -->
+    {% if t.user == request.user %}
+        <a href="{% url 'edit_theory' t.id %}">Edit</a>
+        |
+        <a href="{% url 'delete_theory' t.id %}">Delete</a>
+    {% endif %}
+
+</div>
+
+{% empty %}
+
+<p class="no-post">No theories submitted yet.</p>
+
+{% endfor %}
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+<p>© 2026 CIPHER | Decode The Unknown</p>
+</footer>
+
+</body>
+</html>

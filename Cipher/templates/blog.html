@@ -1,0 +1,171 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CIPHER Blog</title>
+
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+</head>
+
+<body>
+
+
+<!-- Navbar -->
+
+<header class="navbar">
+
+<div class="logo">CIPHER</div>
+
+<nav class="menu">
+<a href="{% url 'home' %}">Home</a>
+<a href="{% url 'add_theory' %}">Submit Your Theory</a>
+<a href="{% url 'theories' %}">Community Theories</a>
+<a href="{% url 'signin' %}">Sign out</a>
+</nav>
+
+</header>
+
+
+<!-- Blog Header -->
+
+<section class="blog-header">
+
+<h1>Conspiracy Theories & Mysteries</h1>
+
+<p>
+Explore strange events, hidden secrets, and theories
+that challenge the official stories.
+</p>
+
+</section>
+
+
+<!-- Blog Posts -->
+
+<section class="blog-posts">
+
+
+<div class="post">
+
+<img class="post-image" src="{% static 'images/area51.jpg' %}" alt="Area 51">
+
+<h2>Area 51 – Alien Technology?</h2>
+
+<p>
+Area 51 is one of the most secretive military bases in the world.
+Many believe alien spacecraft are hidden there.
+</p>
+
+<a href="#">Read Full Article</a>
+
+</div>
+
+
+
+<div class="post">
+
+<img class="post-image" src="{% static 'images/illuminati.jpg' %}" alt="Illuminati">
+
+<h2>The Illuminati – Secret Rulers?</h2>
+
+<p>
+Some believe a secret society called the Illuminati controls
+world politics and finance from behind the scenes.
+</p>
+
+<a href="#">Read Full Article</a>
+
+</div>
+
+
+
+<div class="post">
+
+<img class="post-image" src="{% static 'images/bermuda.jpg' %}" alt="Bermuda Triangle">
+
+<h2>Bermuda Triangle Disappearances</h2>
+
+<p>
+Ships and airplanes have mysteriously disappeared in this region
+of the Atlantic Ocean.
+</p>
+
+<a href="#">Read Full Article</a>
+
+</div>
+
+
+
+<div class="post">
+
+<img class="post-image" src="{% static 'images/moon.jpg' %}" alt="Moon Landing">
+
+<h2>Moon Landing Conspiracy</h2>
+
+<p>
+Some theories claim the 1969 moon landing was staged during the
+Cold War to win the space race.
+</p>
+
+<a href="#">Read Full Article</a>
+
+</div>
+
+
+<div class="post">
+
+<img class="post-image" src="{% static 'images/Reptilian Rulers.jpg' %}" alt="Reptilian Rulers">
+
+<h2>Reptilian Rulers – Hidden Among Us?</h2>
+
+<p>
+A controversial theory claims that shape-shifting reptilian
+beings secretly control powerful positions in governments
+and global organizations.
+</p>
+
+<a href="#">Read Full Article</a>
+
+</div>
+
+
+
+
+<div class="post">
+
+<img class="post-image" src="{% static 'images/earth.jpg' %}" alt="Hollow Earth ">
+
+<h2>Hollow Earth – A Hidden World Inside?</h2>
+<p>
+Some theories claim that the Earth is hollow and contains
+an advanced civilization hidden beneath the surface.
+</p>
+
+<a href="#">Read Full Article</a>
+
+</div>
+
+
+
+
+</section>
+
+
+<!-- Footer -->
+
+<footer class="footer">
+
+<p>© 2026 CIPHER Blog | Question Everything</p>
+
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Edit Theory</title>
+
+<link rel="stylesheet" href="{% static 'css/edit_theory.css' %}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Edit Your Theory</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Title</label>
+        <input type="text" name="title" value="{{ theory.title }}" required>
+
+        <label>Content</label>
+        <textarea name="content" rows="6" required>{{ theory.content }}</textarea>
+
+        <button type="submit">Update</button>
+    </form>
+
+</div>
+
+</body>
+</html>

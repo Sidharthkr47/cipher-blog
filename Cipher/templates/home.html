@@ -1,0 +1,180 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CIPHER | Discover Hidden Truths</title>
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<header class="navbar">
+
+<div class="logo">CIPHER</div>
+
+<nav class="menu">
+<a href="#">Home</a>
+<a href="{% url 'about' %}">Our Story</a>
+<a href="{% url 'blog' %}">Blog</a>
+<a href="{% url 'signin' %}">Sign In</a>
+</nav>
+
+</header>
+
+
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<div class="hero-text center">
+
+<h1>Discover Hidden Truths</h1>
+
+<p>
+Dive into mysterious stories, conspiracy theories,
+and secrets the world doesn’t talk about.
+</p>
+
+<a href="{% url 'blog' %}" class="start-btn">Start Reading</a>
+
+</div>
+
+</section>
+
+
+
+<!-- Featured Mystery -->
+
+<section class="featured">
+
+<h2>Featured Mystery</h2>
+
+<div class="featured-box">
+
+<img src="{% static 'images/area51.jpg' %}">
+
+<div class="featured-text">
+
+<h3>Area 51 – Alien Technology?</h3>
+
+<p>
+Hidden deep in the Nevada desert, Area 51 is believed to
+contain alien spacecraft and unknown technology recovered
+from UFO crashes.
+</p>
+
+<a href="{% url 'blog' %}">Explore More</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- Latest Posts -->
+
+<section class="posts">
+
+<h2>Latest Articles</h2>
+
+<div class="post-container">
+
+<div class="post-card">
+
+<h3>Area 51 Mystery</h3>
+
+<p>
+What secrets are hidden inside the most mysterious
+military base in the world?
+</p>
+
+<a href="#">Read More</a>
+
+</div>
+
+
+<div class="post-card">
+
+<h3>Illuminati Secrets</h3>
+
+<p>
+A deep dive into one of the most famous secret societies.
+</p>
+
+<a href="#">Read More</a>
+
+</div>
+
+
+<div class="post-card">
+
+<h3>Bermuda Triangle</h3>
+
+<p>
+Why do ships and planes disappear in this strange region?
+</p>
+
+<a href="#">Read More</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- Quote Section -->
+
+<section class="quote">
+
+<p>
+"The greatest secrets are always hidden in plain sight."
+</p>
+
+</section>
+
+
+
+<!-- Newsletter -->
+
+<section class="newsletter">
+
+<h2>Stay Curious</h2>
+
+<p>Get new conspiracy theories directly in your inbox.</p>
+
+<input type="email" placeholder="Enter your email">
+
+<button>Subscribe</button>
+
+</section>
+
+
+
+<!-- Footer -->
+
+<footer class="footer">
+
+<p>© 2026 CIPHER Blog | Explore the Unknown</p>
+
+</footer>
+
+
+</body>
+</html>

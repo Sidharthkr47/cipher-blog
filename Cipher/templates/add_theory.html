@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Submit Theory | CIPHER</title>
+
+<link rel="stylesheet" href="{% static 'css/add_theory.css' %}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="logo">CIPHER</h1>
+
+<h2>Submit Your Theory</h2>
+
+<p class="subtitle">
+Share your conspiracy theory with the community.
+</p>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<div class="input-group">
+
+<label>Your Name</label>
+
+<input type="text" name="name" placeholder="Enter your name" >
+
+</div>
+
+
+<div class="input-group">
+
+<label>Theory Title</label>
+
+<input type="text" name="title" placeholder="Enter theory title" >
+
+</div>
+
+
+<div class="input-group">
+
+<label>Your Theory</label>
+
+<textarea name="content" rows="6" placeholder="Write your theory here..." ></textarea>
+
+</div>
+
+
+<button type="submit" class="submit-btn">
+Submit Theory
+</button>
+
+</form>
+
+<a href="{% url 'blog' %}" class="back-link">← Back to Blog</a>
+
+</div>
+
+</body>
+</html>
